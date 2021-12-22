@@ -6,11 +6,12 @@ function showTime() {
   let second = time.getSeconds();
   let isAmPm = "AM";
 
-  if (hour > 12) {
+  if (hour >= 12) {
     isAmPm = "PM";
-    hour = hour - 12;
+    hour -= 11;
   }
   if (hour == 0) {
+    hour = 12;
     isAmPm = "AM";
   }
 
